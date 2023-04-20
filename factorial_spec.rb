@@ -18,7 +18,7 @@ describe Solver do
   it 'Should return 40,320' do
     solver = Solver.new
     result = solver.factorial(8)
-    expect(result).to eq(40,320)
+    expect(result).to eq(40_320)
   end
 
     it 'Given 0 factorial should return 1' do
