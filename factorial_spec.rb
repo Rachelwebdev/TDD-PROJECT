@@ -1,15 +1,15 @@
 require_relative 'solver'
 
-describe Solver do   
-    context 'factorial method unit testing' do
-        it "should return 120" do        
-        solver = Solver.new
-        result = solver.factorial(5)
-        expect(result).to eq(120)
-        end
+describe Solver do
+  context 'factorial method unit testing' do
+    it 'should return 120' do
+      solver = Solver.new
+      result = solver.factorial(5)
+      expect(result).to eq(120)
     end
+  end
 
-    it 'Should return 6' do
+  it 'Should return 6' do
     solver = Solver.new
     result = solver.factorial(3)
     expect(result).to eq(6)
@@ -21,7 +21,7 @@ describe Solver do
     expect(result).to eq(40_320)
   end
 
-    it 'Given 0 factorial should return 1' do
+  it 'Given 0 factorial should return 1' do
     solver = Solver.new
     result = solver.factorial(0)
     expect(result).to eq 1

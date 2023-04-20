@@ -1,5 +1,5 @@
 class Solver
-    def factorial(number)
+  def factorial(number)
     raise Expection, 'Negative numbers are not allowed' if number.negative?
     return 1 if number == 1
     return 1 if number.zero?
@@ -10,5 +10,5 @@ class Solver
   def reverse(word)
     word.chars.reverse.join
   end
-
+  
 end
