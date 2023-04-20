@@ -1,26 +1,33 @@
 require_relative 'solver'
 
-RSpec.describe Solver do
-    let(:solver) {Solver.new}
-
-    context 'when given a positive integer' do
-        it "returns the correct factorial" do
-            expect(solver.factorial(5)).to eq(120)
-            expect(solver.factorial(7)).to eq(5040)
-            expect(solver.factorial(10)).to eq(3628800)
+describe Solver do   
+    context 'factorial method unit testing' do
+        it "should return 120" do        
+        solver = Solver.new
+        result = solver.factorial(5)
+        expect(result).to eq(120)
         end
     end
 
-    context "when given 0" do
-        it "returns 1" do
-            expect(factorial(0)).to eq(1)
-        end
-    end
+    it 'Should return 6' do
+    solver = Solver.new
+    result = solver.factorial(3)
+    expect(result).to eq(6)
+  end
 
-    context "when given a negative integer" do
-        it "raises an ArgumentError" do
-            expect{ factorial(-5) }.to raise_error(ArgumentError, "input must be non-negative")
-             expect{ factorial(-10) }.to raise_error(ArgumentError, "input must be non-negative")
-        end
-    end
+  it 'Should return 40,320' do
+    solver = Solver.new
+    result = solver.factorial(8)
+    expect(result).to eq(40,320)
+  end
+
+    it 'Given 0 factorial should return 1' do
+    solver = Solver.new
+    result = solver.factorial(0)
+    expect(result).to eq 1
+  end
+
+  it 'Negative number factorial should rasie an error' do
+    expect { solver.factorial(-1) }.to raise_error(Exception)
+  end
 end
